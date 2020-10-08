@@ -107,11 +107,11 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="">Building Heights</span>
                         </div>
-                        <input type="number" id="sun1" placeholder="Building 1">
-                        <input type="number" id="sun2" placeholder="Building 2">
-                        <input type="number" id="sun3" placeholder="Building 3">
-                        <input type="number" id="sun4" placeholder="Building 4">
-                        <input type="number" id="sun5" placeholder="Building 5">
+                        <input type="number" max="10" id="sun1" placeholder="1-10">
+                        <input type="number" max="10" id="sun2" placeholder="1-10">
+                        <input type="number" max="10" id="sun3" placeholder="1-10">
+                        <input type="number" max="10" id="sun4" placeholder="1-10">
+                        <input type="number" max="10" id="sun5" placeholder="1-10">
 
                     </div>
                     <button class="btn btn-primary" id="sunBtn">Sunset</button>
@@ -234,6 +234,9 @@
             let building5 = parseInt(document.getElementById("sun5").value);
             if (isNaN(building1) || isNaN(building2) || isNaN(building3) || isNaN(building4) || isNaN(building5)) {
                 alert("Need numbers!");
+            }
+            else if((building1) > 10 || (building2) > 10 || (building3) > 10 || (building4) > 10 || (building5) > 10){
+                alert("Please enter a number between 1-10");
             }
             else {
                 sunsetHills(building1, building2, building3, building4, building5);
