@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/customIcon.ico" />
+    <title>Sunset Hills</title>
+    <link href="content/custom.css" rel="stylesheet" />
+    <!-- Bootstrap core CSS -->
+
+    <link href="content/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="content/scrolling-nav.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">Sunset Hills</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="btn" href="https://github.com/Beau324/Fizzbuzz" target="_blank"><img src="https://img.icons8.com/windows/32/000000/github.png" /></a>
+            <a class="btn" href="https://beau-cunningham.netlify.app" target="_blank"><img src="https://img.icons8.com/windows/32/000000/developer.png" /></a>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#services">Demo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-primary sunsetGradient text-white">
+        <div class="container text-center">
+            <h1>Welcome to Sunset Hills</h1>
+            <p class="lead">A landing page template freshly redesigned for Bootstrap 4</p>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>About this challenge</h2>
+                    <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
+                    <ul>
+                        <li>Clickable nav links that smooth scroll to page sections</li>
+                        <li>Responsive behavior when clicking nav links perfect for a one page website</li>
+                        <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
+                        <li>Minimal custom CSS so you are free to explore your own unique design options</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 offset-1">
+                    <h2 class="text-center">Technologies Used</h2>
+                    <div class="row">
+                        <div class="card-group">
+                            <div class="card">
+                                <img src="images/javascriptIcon.png" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Javascript</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Javascript Used</a>
+                                </div>
+                            </div><div class="card">
+                                <img src="images/htmlIcon.png" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">HTML 5</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">HTML5 Used</a>
+                                </div>
+                            </div><div class="card">
+                                <img src="images/css3Icon.png" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">CSS 3</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">CSS3 Used</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 offset-2">
+                    <h2 class="text-center ">Demo</h2>
+                    <!--<h3>Fizzbuzz</h3>-->
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="">Building Heights</span>
+                        </div>
+                        <input type="number" id="sun1" placeholder="Building 1">
+                        <input type="number" id="sun2" placeholder="Building 2">
+                        <input type="number" id="sun3" placeholder="Building 3">
+                        <input type="number" id="sun4" placeholder="Building 4">
+                        <input type="number" id="sun5" placeholder="Building 5">
+
+                    </div>
+                    <button class="btn btn-primary" id="sunBtn">Sunset</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="progress progress-bar-vertical">
+                        <div id="build1" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                        <!--<div id="light1" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>-->
+                    </div>
+                    <div class="progress progress-bar-vertical">
+                        <div id="build2" class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        <!--<div id="light2" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>-->
+                    </div>
+                    <div class="progress progress-bar-vertical">
+                        <div id="build3" class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                        <!--<div id="light3" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>-->
+                    </div>
+                    <div class="progress progress-bar-vertical">
+                        <div id="build4" class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        <!--<div id="light4" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>-->
+                    </div>
+                    <div class="progress progress-bar-vertical">
+                        <div id="build5" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        <!--<div id="light5" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>-->
+                    </div>
+                    <span id="resultS"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="block-title">
+                        <h3>Get in touch with me!</h3>
+                    </div>
+
+                    <form id="contact_form" class="contact-form">
+
+                        <div class="messages"></div>
+
+                        <div class="controls two-columns">
+                            <div class="fields clearfix">
+                                <div class="left-column">
+                                    <div class="form-group form-group-with-icon">
+                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Full Name" required="required" data-error="Name is required.">
+                                        <div class="form-control-border"></div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+
+                                    <div class="form-group form-group-with-icon">
+                                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Email Address" required="required" data-error="Valid email is required.">
+                                        <div class="form-control-border"></div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+
+                                    <div class="form-group form-group-with-icon">
+                                        <input id="form_subject" type="text" name="subject" class="form-control" placeholder="Subject" required="required" data-error="Subject is required.">
+                                        <div class="form-control-border"></div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="right-column">
+                                    <div class="form-group form-group-with-icon">
+                                        <textarea id="form_message" name="message" class="form-control" placeholder="Message" rows="7" required="required" data-error="Please, leave me a message."></textarea>
+                                        <div class="form-control-border"></div>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <input type="submit" id="button" class="button btn-send" value="Send message">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">emailjs.init('user_cWPq5pgSsHexCuqAhcoTE')</script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="scripts/jquery.easing.min.js"></script>
+    <script src="scripts/custom.js"></script>
+    <!-- Custom JavaScript for this theme -->
+    <script src="scripts/scrolling-nav.js"></script>
+    <script>
+        document.getElementById("sunBtn").addEventListener('click', function () {
+            let building1 = parseInt(document.getElementById("sun1").value);
+            let building2 = parseInt(document.getElementById("sun2").value);
+            let building3 = parseInt(document.getElementById("sun3").value);
+            let building4 = parseInt(document.getElementById("sun4").value);
+            let building5 = parseInt(document.getElementById("sun5").value);
+            if (isNaN(building1) || isNaN(building2) || isNaN(building3) || isNaN(building4) || isNaN(building5)) {
+                alert("Need numbers!");
+            }
+            else {
+                sunsetHills(building1, building2, building3, building4, building5);
+                $("#myModal").modal();
+            }
+        })
+    </script>
+    <script>
+        const btn = document.getElementById('button');
+
+        document.getElementById('contact_form')
+            .addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                btn.value = 'Sending...';
+
+                const serviceID = 'default_service';
+                const templateID = 'template_ygrg1dn';
+
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                        btn.value = 'Send Email';
+                        Swal.fire(
+                            'Good News!',
+                            'Your Email Was Sent',
+                        )
+                    }, (err) => {
+                        btn.value = 'Send Email';
+                        alert(JSON.stringify(err));
+                    });
+            });</script>
+
+</body>
+
+</html>
