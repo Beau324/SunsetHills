@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="content\bootstrap.min.css" />
     <Content Include="content\custom.css" />
+    <Content Include="content\prism.css" />
     <Content Include="content\scrolling-nav.css" />
     <Content Include="images\css3Icon.png" />
     <Content Include="images\customIcon.ico" />
@@ -79,6 +80,7 @@
     <Content Include="scripts\custom.js" />
     <Content Include="scripts\jquery.easing.min.js" />
     <Content Include="scripts\jquery.min.js" />
+    <Content Include="scripts\prism.js" />
     <Content Include="scripts\scrolling-nav.js" />
     <Content Include="Web.config" />
   </ItemGroup>

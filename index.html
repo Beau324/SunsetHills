@@ -11,7 +11,7 @@
     <title>Sunset Hills</title>
     <link href="content/custom.css" rel="stylesheet" />
     <!-- Bootstrap core CSS -->
-
+    <link href="content/prism.css" rel="stylesheet" />
     <link href="content/bootstrap.min.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
     <link href="content/scrolling-nav.css" rel="stylesheet" />
@@ -101,16 +101,45 @@
                     </div>
                 </div>
                 <div id="jsModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-xl">
 
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <h4 class="modal-title">Modal Header</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
                             </div>
                             <div class="modal-body">
-                                <p>Some text in the modal.</p>
+<pre>
+    <code class="language-js">
+        function sunsetHills() {
+        let building1 = parseInt(document.getElementById("sun1").value);
+        let building2 = parseInt(document.getElementById("sun2").value);
+        let building3 = parseInt(document.getElementById("sun3").value);
+        let building4 = parseInt(document.getElementById("sun4").value);
+        let building5 = parseInt(document.getElementById("sun5").value);
+        let buildingArr = [building1, building2, building3, building4, building5];
+        let canSee = ["Building 1 can see the sunset"];
+        let tallest = buildingArr[0];
+        for (i = 1; i < buildingArr.length; i++) {
+        if (buildingArr[i] > tallest) {
+        tallest = buildingArr[i];
+        canSee.push("Building " + (i + 1) + " can see the sunset");
+        }
+        }
+
+        let resultS = canSee.join(", ");
+        document.getElementById("resultS").innerHTML = `<b>${resultS}</b>`;
+        document.getElementById("build1").style.height = (building1 * 10)+ "%";
+        document.getElementById("build2").style.height = (building2 * 10)+ "%";
+        document.getElementById("build3").style.height = (building3 * 10)+ "%";
+        document.getElementById("build4").style.height = (building4 * 10)+ "%";
+        document.getElementById("build5").style.height = (building5 * 10)+ "%";
+
+        }
+    </code>
+</pre>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -120,16 +149,40 @@
                     </div>
                 </div>
                 <div id="cssModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-xl">
 
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <h4 class="modal-title">Modal Header</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
                             </div>
                             <div class="modal-body">
-                                <p>Some text in the modal.</p>
+<pre>
+    <code class="language-css">
+        .progress-bar-vertical {
+        width: 20px;
+        min-height: 100px;
+        margin-right: 20px;
+        float: left;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: flex-end;
+        -webkit-align-items: flex-end;
+        }
+
+        .progress-bar-vertical .progress-bar {
+        width: 100%;
+        height: 0;
+        -webkit-transition: height 0.6s ease;
+        -o-transition: height 0.6s ease;
+        transition: height 0.6s ease;
+        }
+    </code>
+</pre>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -139,16 +192,412 @@
                     </div>
                 </div>
                 <div id="htmlModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-xl">
 
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <h4 class="modal-title">Modal Header</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
                             </div>
                             <div class="modal-body">
-                                <p>Some text in the modal.</p>
+<pre>
+    <code class="language-html">
+        &lt!DOCTYPE html&gt
+        &lthtml lang="en"&gt
+
+        &lthead&gt
+
+        &ltmeta charset="utf-8"&gt
+        &ltmeta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt
+        &ltmeta name="description" content=""&gt
+        &ltmeta name="author" content=""&gt
+        &ltlink rel="shortcut icon" href="images/customIcon.ico" /&gt
+        &lttitle&gtSunset Hills&lt/title&gt
+        &ltlink href="content/custom.css" rel="stylesheet" /&gt
+        &lt!-- Bootstrap core CSS --&gt
+        &ltlink href="content/prism.css" rel="stylesheet" /&gt
+        &ltlink href="content/bootstrap.min.css" rel="stylesheet" /&gt
+        &lt!-- Custom styles for this template --&gt
+        &ltlink href="content/scrolling-nav.css" rel="stylesheet" /&gt
+        &lt/head&gt
+
+        &ltbody id="page-top"&gt
+
+        &lt!-- Navigation --&gt
+        &ltnav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav"&gt
+        &ltdiv class="container"&gt
+        &lta class="navbar-brand js-scroll-trigger" href="#page-top"&gtSunset Hills&lt/a&gt
+        &ltbutton class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"&gt
+        &ltspan class="navbar-toggler-icon"&gt&lt/span&gt
+        &lt/button&gt
+        &lta class="btn" href="https://github.com/Beau324/Fizzbuzz" target="_blank"&gt&ltimg src="https://img.icons8.com/windows/32/000000/github.png" /&gt&lt/a&gt
+        &lta class="btn" href="https://beau-cunningham.netlify.app" target="_blank"&gt&ltimg src="https://img.icons8.com/windows/32/000000/developer.png" /&gt&lt/a&gt
+        &ltdiv class="collapse navbar-collapse" id="navbarResponsive"&gt
+        &ltul class="navbar-nav ml-auto"&gt
+        &ltli class="nav-item"&gt
+        &lta class="nav-link js-scroll-trigger" href="#about"&gtAbout&lt/a&gt
+        &lt/li&gt
+        &ltli class="nav-item"&gt
+        &lta class="nav-link js-scroll-trigger" href="#services"&gtDemo&lt/a&gt
+        &lt/li&gt
+        &ltli class="nav-item"&gt
+        &lta class="nav-link js-scroll-trigger" href="#contact"&gtContact&lt/a&gt
+        &lt/li&gt
+        &lt/ul&gt
+        &lt/div&gt
+        &lt/div&gt
+        &lt/nav&gt
+
+        &ltheader class="bg-primary sunsetGradient text-white"&gt
+        &ltdiv class="container text-center"&gt
+        &lth1&gtWelcome to Sunset Hills&lt/h1&gt
+        &ltp class="lead"&gtAn orignial coding challenge with UX/UI implemented.&lt/p&gt
+        &lt/div&gt
+        &lt/header&gt
+
+        &ltsection id="about"&gt
+        &ltdiv class="container"&gt
+        &ltdiv class="row"&gt
+        &ltdiv class="col-lg-8 mx-auto"&gt
+        &lth2&gtAbout this challenge&lt/h2&gt
+        &ltp class="lead"&gtSunset Hills is a coding challenge that was created by the founder of my school, it demonstrates array manipulation and looping,&lt/p&gt
+        &ltul&gt
+        &ltli&gtTakes in user inputs.&lt/li&gt
+        &ltli&gtIterate through the array.&lt/li&gt
+        &ltli&gtCompare the index to the ones before it.&lt/li&gt
+        &ltli&gtDisplay what buildings will be able to see the sunset&lt/li&gt
+        &lt/ul&gt
+        &lt/div&gt
+        &lt/div&gt
+        &lt/div&gt
+        &lt/section&gt
+
+        &ltsection id="services" class="bg-light"&gt
+        &ltdiv class="container"&gt
+        &ltdiv class="row"&gt
+        &ltdiv class="col-6 offset-1"&gt
+        &lth2 class="text-center"&gtTechnologies Used&lt/h2&gt
+        &ltdiv class="row"&gt
+        &ltdiv class="card-group"&gt
+        &ltdiv class="card"&gt
+        &ltimg src="images/javascriptIcon.png" class="card-img-top" alt="..." /&gt
+        &ltdiv class="card-body"&gt
+        &lth5 class="card-title"&gtJavascript&lt/h5&gt
+        &ltp class="card-text"&gtSome quick example text to build on the card title and make up the bulk of the card's content.&lt/p&gt
+        &lta href="#" class="btn btn-warning" data-toggle="modal" data-target="#jsModal"&gtJavascript Used&lt/a&gt
+        &lt/div&gt
+        &lt/div&gt&ltdiv class="card"&gt
+        &ltimg src="images/htmlIcon.png" class="card-img-top" alt="..." /&gt
+        &ltdiv class="card-body"&gt
+        &lth5 class="card-title"&gtHTML 5&lt/h5&gt
+        &ltp class="card-text"&gtSome quick example text to build on the card title and make up the bulk of the card's content.&lt/p&gt
+        &lta href="#" class="btn btn-warning" data-toggle="modal" data-target="#htmlModal"&gtHTML5 Used&lt/a&gt
+        &lt/div&gt
+        &lt/div&gt&ltdiv class="card"&gt
+        &ltimg src="images/css3Icon.png" class="card-img-top" alt="..." /&gt
+        &ltdiv class="card-body"&gt
+        &lth5 class="card-title"&gtCSS 3&lt/h5&gt
+        &ltp class="card-text"&gtSome quick example text to build on the card title and make up the bulk of the card's content.&lt/p&gt
+        &lta href="#" class="btn btn-warning" data-toggle="modal" data-target="#cssModal"&gtCSS3 Used&lt/a&gt
+        &lt/div&gt
+        &lt/div&gt
+        &lt/div&gt
+        &lt/div&gt
+        &lt/div&gt
+        &ltdiv id="jsModal" class="modal fade" role="dialog"&gt
+        &ltdiv class="modal-dialog"&gt
+
+        &lt!-- Modal content--&gt
+        &ltdiv class="modal-content"&gt
+        &ltdiv class="modal-header"&gt
+        &lth4 class="modal-title"&gtModal Header&lt/h4&gt
+        &ltbutton type="button" class="close" data-dismiss="modal"&gt&times;&lt/button&gt
+
+        &lt/div&gt
+        &ltdiv class="modal-body"&gt
+        &ltpre&gt
+        &ltcode class="language-js"&gt
+        function sunsetHills() {
+        let building1 = parseInt(document.getElementById("sun1").value);
+        let building2 = parseInt(document.getElementById("sun2").value);
+        let building3 = parseInt(document.getElementById("sun3").value);
+        let building4 = parseInt(document.getElementById("sun4").value);
+        let building5 = parseInt(document.getElementById("sun5").value);
+        let buildingArr = [building1, building2, building3, building4, building5];
+        let canSee = ["Building 1 can see the sunset"];
+        let tallest = buildingArr[0];
+        for (i = 1; i &lt buildingArr.length; i++) {
+        if (buildingArr[i] &gt tallest) {
+        tallest = buildingArr[i];
+        canSee.push("Building " + (i + 1) + " can see the sunset");
+        }
+        }
+
+        let resultS = canSee.join(", ");
+        document.getElementById("resultS").innerHTML = `&ltb&gt${resultS}&lt/b&gt`;
+        document.getElementById("build1").style.height = (building1 * 10)+ "%";
+        document.getElementById("build2").style.height = (building2 * 10)+ "%";
+        document.getElementById("build3").style.height = (building3 * 10)+ "%";
+        document.getElementById("build4").style.height = (building4 * 10)+ "%";
+        document.getElementById("build5").style.height = (building5 * 10)+ "%";
+
+        }
+        &lt/code&gt
+        &lt/pre&gt
+        &lt/div&gt
+        &ltdiv class="modal-footer"&gt
+        &ltbutton type="button" class="btn btn-default" data-dismiss="modal"&gtClose&lt/button&gt
+        &lt/div&gt
+        &lt/div&gt
+
+        &lt/div&gt
+        &lt/div&gt
+        &ltdiv id="cssModal" class="modal fade" role="dialog"&gt
+        &ltdiv class="modal-dialog"&gt
+
+        &lt!-- Modal content--&gt
+        &ltdiv class="modal-content"&gt
+        &ltdiv class="modal-header"&gt
+        &lth4 class="modal-title"&gtModal Header&lt/h4&gt
+        &ltbutton type="button" class="close" data-dismiss="modal"&gt&times;&lt/button&gt
+
+        &lt/div&gt
+        &ltdiv class="modal-body"&gt
+        &ltpre&gt
+        &ltcode class="language-css"&gt
+        .progress-bar-vertical {
+        width: 20px;
+        min-height: 100px;
+        margin-right: 20px;
+        float: left;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: flex-end;
+        -webkit-align-items: flex-end;
+        }
+
+        .progress-bar-vertical .progress-bar {
+        width: 100%;
+        height: 0;
+        -webkit-transition: height 0.6s ease;
+        -o-transition: height 0.6s ease;
+        transition: height 0.6s ease;
+        }
+        &lt/code&gt
+        &lt/pre&gt
+        &lt/div&gt
+        &ltdiv class="modal-footer"&gt
+        &ltbutton type="button" class="btn btn-default" data-dismiss="modal"&gtClose&lt/button&gt
+        &lt/div&gt
+        &lt/div&gt
+
+        &lt/div&gt
+        &lt/div&gt
+        &ltdiv id="htmlModal" class="modal fade" role="dialog"&gt
+        &ltdiv class="modal-dialog"&gt
+
+        &lt!-- Modal content--&gt
+        &ltdiv class="modal-content"&gt
+        &ltdiv class="modal-header"&gt
+        &lth4 class="modal-title"&gtModal Header&lt/h4&gt
+        &ltbutton type="button" class="close" data-dismiss="modal"&gt&times;&lt/button&gt
+
+        &lt/div&gt
+        &ltdiv class="modal-body"&gt
+        &ltpre&gt
+        &ltcode class="language-html"&gt
+
+        &lt/code&gt
+        &lt/pre&gt
+        &lt/div&gt
+        &ltdiv class="modal-footer"&gt
+        &ltbutton type="button" class="btn btn-default" data-dismiss="modal"&gtClose&lt/button&gt
+        &lt/div&gt
+        &lt/div&gt
+
+        &lt/div&gt
+        &lt/div&gt
+        &ltdiv class="col-3 offset-2"&gt
+        &lth2 class="text-center "&gtDemo&lt/h2&gt
+        &lt!--&lth3&gtFizzbuzz&lt/h3&gt--&gt
+        &ltdiv class="input-group"&gt
+        &ltdiv class="input-group-prepend"&gt
+        &ltspan class="input-group-text" id=""&gtBuilding Heights&lt/span&gt
+        &lt/div&gt
+        &ltinput type="number" id="sun1" placeholder="1-10"&gt
+        &ltinput type="number" id="sun2" placeholder="1-10"&gt
+        &ltinput type="number" id="sun3" placeholder="1-10"&gt
+        &ltinput type="number" id="sun4" placeholder="1-10"&gt
+        &ltinput type="number" id="sun5" placeholder="1-10"&gt
+
+        &lt/div&gt
+        &ltbutton class="btn btn-warning" id="sunBtn"&gtSunset&lt/button&gt
+        &lt/div&gt
+        &lt/div&gt
+        &lt/div&gt
+        &lt/section&gt
+        &ltdiv id="myModal" class="modal fade" role="dialog"&gt
+        &ltdiv class="modal-dialog"&gt
+        &ltdiv class="modal-content"&gt
+        &ltdiv class="modal-header"&gt
+        &lth4 class="modal-title"&gtWho can see the sunset?&lt/h4&gt
+        &ltbutton type="button" class="close" data-dismiss="modal"&gt&times;&lt/button&gt
+
+        &lt/div&gt
+        &ltdiv class="modal-body"&gt
+        &ltdiv class="progress progress-bar-vertical"&gt
+        &ltdiv id="build1" class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt
+        &lt!--&ltdiv id="light1" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt--&gt
+        &lt/div&gt
+        &ltdiv class="progress progress-bar-vertical"&gt
+        &ltdiv id="build2" class="progress-bar bg-warning" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt
+        &lt!--&ltdiv id="light2" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt--&gt
+        &lt/div&gt
+        &ltdiv class="progress progress-bar-vertical"&gt
+        &ltdiv id="build3" class="progress-bar bg-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt
+        &lt!--&ltdiv id="light3" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt--&gt
+        &lt/div&gt
+        &ltdiv class="progress progress-bar-vertical"&gt
+        &ltdiv id="build4" class="progress-bar bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt
+        &lt!--&ltdiv id="light4" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt--&gt
+        &lt/div&gt
+        &ltdiv class="progress progress-bar-vertical"&gt
+        &ltdiv id="build5" class="progress-bar bg-warning" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt
+        &lt!--&ltdiv id="light5" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"&gt&lt/div&gt--&gt
+        &lt/div&gt
+        &ltspan id="resultS"&gt&lt/span&gt
+        &lt/div&gt
+        &ltdiv class="modal-footer"&gt
+        &ltbutton type="button" class="btn btn-default" data-dismiss="modal"&gtClose&lt/button&gt
+        &lt/div&gt
+        &lt/div&gt
+
+        &lt/div&gt
+        &lt/div&gt
+        &ltsection id="contact"&gt
+        &ltdiv class="container"&gt
+        &ltdiv class="row"&gt
+        &ltdiv class="col-lg-8 mx-auto"&gt
+        &ltdiv class="block-title"&gt
+        &lth3&gtGet in touch with me!&lt/h3&gt
+        &lt/div&gt
+
+        &ltform id="contact_form" class="contact-form"&gt
+
+        &ltdiv class="messages"&gt&lt/div&gt
+
+        &ltdiv class="controls two-columns"&gt
+        &ltdiv class="fields clearfix"&gt
+        &ltdiv class="left-column"&gt
+        &ltdiv class="form-group form-group-with-icon"&gt
+        &ltinput id="form_name" type="text" name="name" class="form-control" placeholder="Full Name" required="required" data-error="Name is required."&gt
+        &ltdiv class="form-control-border"&gt&lt/div&gt
+        &ltdiv class="help-block with-errors"&gt&lt/div&gt
+        &lt/div&gt
+
+        &ltdiv class="form-group form-group-with-icon"&gt
+        &ltinput id="form_email" type="email" name="email" class="form-control" placeholder="Email Address" required="required" data-error="Valid email is required."&gt
+        &ltdiv class="form-control-border"&gt&lt/div&gt
+        &ltdiv class="help-block with-errors"&gt&lt/div&gt
+        &lt/div&gt
+
+        &ltdiv class="form-group form-group-with-icon"&gt
+        &ltinput id="form_subject" type="text" name="subject" class="form-control" placeholder="Subject" required="required" data-error="Subject is required."&gt
+        &ltdiv class="form-control-border"&gt&lt/div&gt
+        &ltdiv class="help-block with-errors"&gt&lt/div&gt
+        &lt/div&gt
+        &lt/div&gt
+        &ltdiv class="right-column"&gt
+        &ltdiv class="form-group form-group-with-icon"&gt
+        &lttextarea id="form_message" name="message" class="form-control" placeholder="Message" rows="7" required="required" data-error="Please, leave me a message."&gt&lt/textarea&gt
+        &ltdiv class="form-control-border"&gt&lt/div&gt
+        &ltdiv class="help-block with-errors"&gt&lt/div&gt
+        &lt/div&gt
+        &lt/div&gt
+        &lt/div&gt
+
+        &ltinput type="submit" id="button" class="button btn-send" value="Send message"&gt
+        &lt/div&gt
+        &lt/form&gt
+        &lt/div&gt
+        &lt/div&gt
+        &lt/div&gt
+        &lt/section&gt
+
+        &lt!-- Footer --&gt
+        &ltfooter class="py-5 bg-dark"&gt
+        &ltdiv class="container"&gt
+        &ltp class="m-0 text-center text-white"&gtCopyright &copy; Sunset Hills 2020&lt/p&gt
+        &lt/div&gt
+        &lt!-- /.container --&gt
+        &lt/footer&gt
+        &ltscript src="https://cdn.jsdelivr.net/npm/sweetalert2@10"&gt&lt/script&gt
+        &ltscript type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"&gt&lt/script&gt
+        &ltscript type="text/javascript"&gtemailjs.init('user_cWPq5pgSsHexCuqAhcoTE')&lt/script&gt
+        &lt!-- Bootstrap core JavaScript --&gt
+        &ltscript src="scripts/jquery.min.js"&gt&lt/script&gt
+        &ltscript src="scripts/bootstrap.bundle.min.js"&gt&lt/script&gt
+
+        &lt!-- Plugin JavaScript --&gt
+        &ltscript src="scripts/jquery.easing.min.js"&gt&lt/script&gt
+        &ltscript src="scripts/custom.js"&gt&lt/script&gt
+        &lt!-- Custom JavaScript for this theme --&gt
+        &ltscript src="scripts/prism.js"&gt&lt/script&gt
+        &ltscript src="scripts/scrolling-nav.js"&gt&lt/script&gt
+        &ltscript&gt
+        document.getElementById("sunBtn").addEventListener('click', function () {
+        let building1 = parseInt(document.getElementById("sun1").value);
+        let building2 = parseInt(document.getElementById("sun2").value);
+        let building3 = parseInt(document.getElementById("sun3").value);
+        let building4 = parseInt(document.getElementById("sun4").value);
+        let building5 = parseInt(document.getElementById("sun5").value);
+        if (isNaN(building1) || isNaN(building2) || isNaN(building3) || isNaN(building4) || isNaN(building5)) {
+        alert("Need numbers!");
+        }
+        else if ((building1) &gt 10 || (building2) &gt 10 || (building3) &gt 10 || (building4) &gt 10 || (building5) &gt 10) {
+        alert("Please enter a number between 1-10");
+        }
+        else {
+        sunsetHills(building1, building2, building3, building4, building5);
+        $("#myModal").modal();
+        }
+        })
+        &lt/script&gt
+        &ltscript&gt
+        const btn = document.getElementById('button');
+
+        document.getElementById('contact_form')
+        .addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        btn.value = 'Sending...';
+
+        const serviceID = 'default_service';
+        const templateID = 'template_ygrg1dn';
+
+        emailjs.sendForm(serviceID, templateID, this)
+        .then(() =&gt {
+        btn.value = 'Send Email';
+        Swal.fire(
+        'Good News!',
+        'Your Email Was Sent',
+        )
+        }, (err) =&gt {
+        btn.value = 'Send Email';
+        alert(JSON.stringify(err));
+        });
+        });&lt/script&gt
+
+        &lt/body&gt
+
+        &lt/html&gt
+
+    </code>
+</pre>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -157,18 +606,18 @@
 
                     </div>
                 </div>
-                <div class="col-3 offset-2">
+                <div class="col-3 offset-1">
                     <h2 class="text-center ">Demo</h2>
                     <!--<h3>Fizzbuzz</h3>-->
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="">Building Heights</span>
                         </div>
-                        <input type="number" max="10" id="sun1" placeholder="1-10">
-                        <input type="number" max="10" id="sun2" placeholder="1-10">
-                        <input type="number" max="10" id="sun3" placeholder="1-10">
-                        <input type="number" max="10" id="sun4" placeholder="1-10">
-                        <input type="number" max="10" id="sun5" placeholder="1-10">
+                        <input type="number" id="sun1" placeholder="1-10">
+                        <input type="number" id="sun2" placeholder="1-10">
+                        <input type="number" id="sun3" placeholder="1-10">
+                        <input type="number" id="sun4" placeholder="1-10">
+                        <input type="number" id="sun5" placeholder="1-10">
 
                     </div>
                     <button class="btn btn-warning" id="sunBtn">Sunset</button>
@@ -282,6 +731,7 @@
     <script src="scripts/jquery.easing.min.js"></script>
     <script src="scripts/custom.js"></script>
     <!-- Custom JavaScript for this theme -->
+    <script src="scripts/prism.js"></script>
     <script src="scripts/scrolling-nav.js"></script>
     <script>
         document.getElementById("sunBtn").addEventListener('click', function () {
@@ -293,7 +743,7 @@
             if (isNaN(building1) || isNaN(building2) || isNaN(building3) || isNaN(building4) || isNaN(building5)) {
                 alert("Need numbers!");
             }
-            else if((building1) > 10 || (building2) > 10 || (building3) > 10 || (building4) > 10 || (building5) > 10){
+            else if ((building1) > 10 || (building2) > 10 || (building3) > 10 || (building4) > 10 || (building5) > 10) {
                 alert("Please enter a number between 1-10");
             }
             else {
